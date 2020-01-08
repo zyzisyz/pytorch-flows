@@ -85,6 +85,9 @@ dataset = getattr(datasets, args.dataset)()
 if args.cond:
     assert args.flow in ['maf', 'realnvp'] and args.dataset == 'MNIST', \
         'Conditional flows are implemented only for maf and MNIST'
+
+    print("start to train MNIST {}".format(args.flow))
+    print("epochs: ", args.epochs, "\n")
     
     train_tensor = torch.from_numpy(dataset.trn.x)
     train_labels = torch.from_numpy(dataset.trn.y)

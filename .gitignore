@@ -1,5 +1,8 @@
 # Data
 datasets/data/
+data/
+runs/
+images
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -102,3 +105,4 @@ ENV/
 
 # mypy
 .mypy_cache/
+
