@@ -4,6 +4,7 @@ data/
 runs/
 *.png
 *.gif
+image*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

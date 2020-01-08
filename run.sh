@@ -1,16 +1,15 @@
 #!/bin/bash
 
 #*************************************************************************
-#	> File Name: tran.sh
+#	> File Name: run.sh
 #	> Author: Yang Zhang 
 #	> Mail: zyziszy@foxmail.com 
-#	> Created Time: Tue Jan  7 20:44:04 2020
+#	> Created Time: Wed Jan  8 23:55:44 2020
 # ************************************************************************/
 
-python -u main.py \
-	--epochs 1500 \
-	--flow realnvp \
-	--cond \
-	--dataset MNIST
 
+bash 01_train_maf_mnist.sh
+wait
 
+bash 02_train_realnvp_mnist.sh
+wait

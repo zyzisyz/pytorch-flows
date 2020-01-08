@@ -53,6 +53,7 @@ def save_images(epoch, best_model, cond, name):
         os.makedirs('images')
     except OSError:
         pass
-
-    torchvision.utils.save_image(imgs, 'images/{}/img_{:03d}.png'.format(name, epoch), nrow=10)
+    if(os.path.exists('images_{}'.format(name))==False):
+        os.mkdir('images_{}'.format(name))
+    torchvision.utils.save_image(imgs, 'images_{}/img_{:03d}.png'.format(name, epoch), nrow=10)
 
