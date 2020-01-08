@@ -314,7 +314,7 @@ for epoch in range(args.epochs):
     if args.dataset == 'MOONS' and epoch % 10 == 0:
         utils.save_moons_plot(epoch, model, dataset)
     elif args.dataset == 'MNIST' and epoch % 1 == 0:
-        utils.save_images(epoch, model, args.cond)
+        utils.save_images(epoch, model, args.cond, args.flow)
 
 
 validate(best_validation_epoch, best_model, test_loader, prefix='Test')

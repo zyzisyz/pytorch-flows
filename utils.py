@@ -39,7 +39,7 @@ y_onehot.zero_()
 y_onehot.scatter_(1, y, 1)
 
 
-def save_images(epoch, best_model, cond):
+def save_images(epoch, best_model, cond, name):
     best_model.eval()
     with torch.no_grad():
         if cond:
@@ -54,5 +54,5 @@ def save_images(epoch, best_model, cond):
     except OSError:
         pass
 
-    torchvision.utils.save_image(imgs, 'images/img_{:03d}.png'.format(epoch), nrow=10)
+    torchvision.utils.save_image(imgs, 'images/{}/img_{:03d}.png'.format(name, epoch), nrow=10)
 
